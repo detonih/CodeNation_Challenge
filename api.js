@@ -2,7 +2,7 @@ const request = require('request');
 const FormData = require('form-data');
 const fs = require('fs');
 
-const resultFound = request('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=ae5ad576d68d238339b806a4ce7192b4ef1588ad', function (error, response, body) {
+const resultFound = request('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=MY_TOKEN', function (error, response, body) {
   console.error('error:', error); 
   console.log('statusCode:', response && response.statusCode); 
   console.log('body:', body); 
@@ -22,7 +22,7 @@ const data = fs.readFile("./answer.json", "UTF-8", (err, file) => {
 
 request.post({
   headers: {'content-type' : 'multipart/form-data'},
-  url: 'https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=ae5ad576d68d238339b806a4ce7192b4ef1588ad',
+  url: 'https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=MY_TOKEN',
   data: data 
 }, function(error, response, body){
   if (error) {
