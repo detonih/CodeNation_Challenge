@@ -1,6 +1,6 @@
 const challenge = {"numero_casas":1,"token":"MEU_TOKEN","cifrado":"xifo efcvhhjoh, opwjdft jotfsu dpssfdujwf dpef; fyqfsut sfnpwf efgfdujwf dpef. sjdibse qbuujt","decifrado":"","resumo_criptografico":""}
 
-const msgToBeDecrypted = challenge.cifrado.toLocaleLowerCase();
+const msgToBeDecrypted = challenge.cifrado.toLowerCase();
 const displacement = challenge.numero_casas;
 
 const decrypt = (disp) => {
