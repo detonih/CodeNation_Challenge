@@ -11,7 +11,7 @@ const decrypt = (disp) => {
     for(let i = 0; i < getCryptMsg.length; i++) {
         
         if(getCryptMsg[i].charCodeAt() < 97 || getCryptMsg[i].charCodeAt() > 122) {
-            deCryptMsg.push(String.fromCharCode(getCryptMsg[i].charCodeAt()));
+            deCryptMsg.push(getCryptMsg[i]);
         } else {
             deCryptMsg.push(String.fromCharCode(((getCryptMsg[i].charCodeAt() - 122 + reverseDisp) % 26) + 122));
         }
